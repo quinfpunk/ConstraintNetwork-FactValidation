@@ -1,0 +1,3 @@
+[submodule "1.DataGeneration/qualreas"]
+	path = 1.DataGeneration/qualreas
+	url = git@github.com:alreich/qualreas.git
