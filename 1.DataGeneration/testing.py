@@ -255,10 +255,10 @@ if __name__ == "__main__":
                     prog='Constraint network fact validation testing',
                     description='Test the constaint discovered and saved in the associated folder',
                     epilog='Contact Timothée Strouk <timothee.strouk@student-cs.fr> for any questions ;)')
-    parser.add_argument("--cons_net_folder")
-    parser.add_argument("--constraints_folder")
-    parser.add_argument("--noise_rate")
-    parser.add_argument("--inclusive")
+    parser.add_argument("--cons_net_folder", default=".")
+    parser.add_argument("--constraints_folder", default="rules")
+    parser.add_argument("--noise_ratio", default=str(0))
+    parser.add_argument("--inclusive", default=str(False))
     args = parser.parse_args()
     # TODO: Test on more data, not in parameter because it should always be full dataset except in development
     test_indices = [i for i in range(2000, 4000)]

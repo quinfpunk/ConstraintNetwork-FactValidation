@@ -5,7 +5,6 @@ import pprint
 from tqdm import tqdm
 from collections import defaultdict
 from testing import test_rule
-from utils import *
 import os
 import argparse
 
@@ -49,11 +48,11 @@ if __name__ == "__main__":
                     description='Discover constraints from constraint networks and save in the associated folder',
                     epilog='Contact Timothée Strouk <timothee.strouk@student-cs.fr> for any questions ;)')
     parser.add_argument("--cons_net_folder")
-    parser.add_argument("--constraints_folder")
-    parser.add_argument("--noise_rate")
-    parser.add_argument("--inclusive")
+    parser.add_argument("--constraints_folder", default="rules")
+    parser.add_argument("--noise_ratio", default=str(0.05))
+    parser.add_argument("--inclusive", default=str(False))
     parser.add_argument("--accuracy_threshold", default=str(0.95))
-    parser.add_argument("--enable_weighted_mapping")
+    parser.add_argument("--enable_weighted_mapping", default=str(True))
     args = parser.parse_args()
     # End of parameters
     validate = 0
