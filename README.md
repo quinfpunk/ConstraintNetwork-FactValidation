@@ -23,11 +23,15 @@ The data can be generated for a new class through the use of a HDT file and a qu
 To run the experiment first create a environment following the `requirements.txt`.
 ### Constraint discovery
 Afterward, you can run the temporal constraint discovery:
+
 `python discovery.py --cons_net_folder constraint_networks`
+
 To get the full list of options of the script use the `--help` option.
 You can also change the amount of data use for the experiment (line 61 of `discovery.py`).
 ### Evaluation
 To compute the evaluation, run the `testing.py` script:
+
 `python testing.py --cons_net_folder constraint_networks`
+
 You can see the other options using the `--help` option.
 You can also change the amount of data use for the experiment (line 264 of `testing.py`).
